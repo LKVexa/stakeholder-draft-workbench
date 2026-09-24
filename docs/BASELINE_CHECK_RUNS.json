@@ -1,0 +1,37 @@
+{
+ "build": "JY-S012-P001/0.1.1-partial/run-0001",
+ "environment": {
+  "executor": "Claude (claude-fable-5), claude cowork session 01SaQzDRzMFXvRabmCC6JDJD",
+  "python": "3.11.15",
+  "platform": "Linux-6.18.44-fc-v24-x86_64-with-glibc2.39",
+  "location": "Anthropic cloud container (Linux)"
+ },
+ "checks": [
+  {
+   "id": "baseline-unit-tests",
+   "command": "python3 -m unittest discover -s tests -t .",
+   "result": "PASS 12/12 (baseline 0.1.0-partial)",
+   "captured_at": "2026-09-14T18:55:59.135741+00:00"
+  },
+  {
+   "id": "audit-probes-baseline",
+   "command": "live defect probes (see audit/)",
+   "result": "4 findings reproduced (A013-F1..F4)",
+   "captured_at": "2026-09-14T18:55:59.135741+00:00"
+  },
+  {
+   "id": "candidate-unit-tests",
+   "command": "python3 -m unittest discover -s tests -t .",
+   "result": "PASS 26/26 (candidate 0.1.1-partial, final bytes)",
+   "captured_at": "2026-09-14T18:55:59.135741+00:00"
+  }
+ ],
+ "unrun_checks": [
+  "Windows-native launch UNRUN - no Windows runtime this session",
+  "independent review NOT PERFORMED",
+  "model-based drafting/translation",
+  "channel integrations",
+  "phase/gate program"
+ ],
+ "note": "Evidence current for these inputs on this host only."
+}
